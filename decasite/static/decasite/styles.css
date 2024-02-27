@@ -1,0 +1,46 @@
+.googleCalendar{
+    position: relative;
+    height: 0;
+    width: 50%;
+    padding-bottom: 50%;
+  }
+  
+  .googleCalendar iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+    
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #video-background video {
+    object-fit: cover;
+    opacity: 0.5; /* reduced video opacity to make text more visible */
+  }
+  
+  
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,13 @@
+{% extends "decasite/base.html" %}
+{%load static%}
+{% block content %}
+    <form method="post" action="{% url 'mark_attendance' %}" class="p-3 border rounded">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="user" class="form-label">User:</label>
+            <input type="text" name="user" class="form-control" id="user" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Mark as present (Add 1 meeting)</button>
+    </form>
+
+{% endblock %}

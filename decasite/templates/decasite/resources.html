@@ -1,0 +1,76 @@
+<!-- this page will be used for resources-->
+{% extends "decasite/base.html" %}
+{%load static%}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="bg-light">Resources</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body { 
+            background-color: #f8f9fa; 
+            font-family: 'Arial', sans-serif; 
+        }
+        .header {
+            background-color: #007bff; 
+            color: white; 
+            padding: 10px 0; 
+            text-align: center; 
+        }
+        .resource-card {
+            margin: 20px 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header bg-light">
+        <h1 class="text-primary">Resources</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 resource-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">DECA Official Website</h5>
+                        <p class="card-text">Explore the official DECA website for comprehensive resources and updates.</p>
+                        <a href="https://www.deca.org" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 resource-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">DECA+ Resources</h5>
+                        <p class="card-text">Access additional learning materials and resources on DECA+.</p>
+                        <a href="https://www.decaplus.com" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 resource-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">GroupMe</h5>
+                        <p class="card-text">Join the LT deca groupme for announcements and messages</p>
+                        <a href="https://groupme.com/join_group/95442936/iylyshtl" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more resources as needed -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+{% endblock %}

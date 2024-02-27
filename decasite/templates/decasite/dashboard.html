@@ -1,0 +1,32 @@
+{% extends "decasite/base.html" %}
+
+{% block content %}
+
+
+
+    <div class="text-center mt-5">
+        <h1 class="display-4">Dashboard</h1>
+        <p class="lead">Hello, {{ user.username }}! You have attended {{ user.meetings_attended }} meetings.</p>
+        <p class="lead">You are in the following cohort: {{user.cohort}} </p>
+        <p class="lead">You are in the following event: {{user.event}}</p>
+        <p class="lead">T-Shirt Size: {{user.tshirt}}</p>
+        <p class="lead">Deca ID: {{user.decaid}}</p>
+    </div>
+
+    <form method="post" action="/new_event/" class="text-center mt-5">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Update Event</button>
+    </form>
+    {% if request.user.is_superuser %}
+        <div class="text-center mt-5">
+            <p class="lead">You are marked as a superuser (admin), so you have the power to take attendance </p>
+        </div>
+
+        <form method="post" action="/attendance_page/" class="text-center mt-5">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Take Attendance</button>
+        </form>
+    {% endif %}
+ 
+{% endblock %}
+
